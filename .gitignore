@@ -2,15 +2,22 @@
 Thumbs.db
 
 cache/**
+!cache/**/
+!cache/**/.gitkeep
 !cache/**/.htaccess
 
 Debug/**
 !Debug/.htaccess
 
 Files/**
+!Files/**/
+!Files/support/index.html
+!Files/**/.gitkeep
 !Files/.htaccess
 
 template/compiled/**
+!template/compiled/**/
+!template/compiled/.gitkeep
 template/panel/assets/media/icon/**
 
 Library/configs/**
