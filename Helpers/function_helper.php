@@ -935,15 +935,21 @@ if ( ! function_exists('detect_lang')) {
 
         $config_project = getConfig('config');
 
-        if(isset($_SERVER['HTTP_HOST']) AND !empty($_SERVER['HTTP_HOST']))
+        if(isset($_SERVER['HTTP_HOST']) AND !empty($_SERVER['HTTP_HOST'])) {
             $pars_url = parse_url($_SERVER['HTTP_HOST']);
-        elseif(isset($_SERVER['SERVER_NAME']) AND !empty($_SERVER['SERVER_NAME']))
+        } elseif(isset($_SERVER['SERVER_NAME']) AND !empty($_SERVER['SERVER_NAME'])) {
             $pars_url = parse_url($_SERVER['SERVER_NAME']);
-        else{
+        } else {
             $pars_url = parse_url($config_project['project']['url_site']);
         }
 
-        $config['base_url'] = $config_project['project']['protocol_site'].'://'.$pars_url["path"].'/';
+        $host = !empty($pars_url['path']) ? $pars_url['path'] : $pars_url['host'];
+
+        if(!empty($pars_url['port'])) {
+            $host .= ':'.$pars_url['port'];
+        }
+
+        $config['base_url'] = $config_project['project']['protocol_site'].'://' . $host . '/';
 
         $index_page    = '';//$config['index_page'];
         /* default language abbreviation */
