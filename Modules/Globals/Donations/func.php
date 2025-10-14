@@ -30,6 +30,8 @@ class func
         'digiseller',
         'b2pay',
         'test',
+        'cryptocloud',
+        'antilopay',
     );
 
     public function __construct($this_main)

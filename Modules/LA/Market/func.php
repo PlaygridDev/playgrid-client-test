@@ -37,7 +37,9 @@ class func
         'ips_payment',
         'digiseller',
         'b2pay',
-        'test'
+        'test',
+        'cryptocloud',
+        'antilopay',
     );
 
     public $datatable;

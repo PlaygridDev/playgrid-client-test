@@ -23,6 +23,8 @@ class App extends Controller
         'ips_payment',
         'digiseller',
         'b2pay',
+        'cryptocloud',
+        'antilopay',
     );
 
     public $advertising = false;

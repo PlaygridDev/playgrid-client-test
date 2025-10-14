@@ -125,6 +125,8 @@ $ignore_detect_lang_page = array(
     '/api/payment/liqpay/'.PAYMENT_KEY,
     '/api/payment/paypalych/'.PAYMENT_KEY,
     '/api/payment/b2pay/'.PAYMENT_KEY,
+    '/api/payment/cryptocloud/'.PAYMENT_KEY,
+    '/api/payment/antilopay/'.PAYMENT_KEY,
     '/text',
     '/captcha/altcha',
     '/prefix/refresh',

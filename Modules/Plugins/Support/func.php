@@ -40,6 +40,8 @@ class func
         'ips_payment',
         'digiseller',
         'b2pay',
+        'cryptocloud',
+        'antilopay',
     );
     //Список тикетов
     public $tickets = array(
